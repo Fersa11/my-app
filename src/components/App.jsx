@@ -6,12 +6,11 @@ import NoteTitle, { NoteContent } from './Note';
 function App() {
     return (
         <div>
-            <header className='header'><Header /></header>
+            <Header />
             <div className='note'>
                 <NoteTitle />
-                <NoteContent />
             </div>
-            <footer className='footer'> <Footer /></footer>
+            <Footer />
         </div>
     )
 };
