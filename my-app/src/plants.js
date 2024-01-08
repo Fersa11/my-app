@@ -98,7 +98,7 @@ const plants = [
         germinationTime: '7-14 days',
         harvestTime: 'Spring to Summer',
         indoorsGermination: false,
-        image: 'https://www.gemuese.ch/media/eiifmkuu/salat_hydrokultur_010919.png?width=720&height=720&format=webp&quality=80'
+        image: 'https://www.gemuese.ch/media/eiifmkuu/salat_hydrokultur_010919.png?width=480&height=480&format=webp&quality=80'
     },
     {
         id: 10,

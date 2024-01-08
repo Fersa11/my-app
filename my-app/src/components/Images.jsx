@@ -2,11 +2,9 @@ import React from "react";
 
 function PlantImages(props) {
     return (
-        <div>
-            <img className="circle-img"
-                src={props.image}
-                alt={props.alt}
-            />
+        <div className="top">
+            <h2 className="name">{props.plantName}</h2>
+            <img className="img" src={props.image} alt={props.alt} />
         </div>
     );
 }

@@ -12,9 +12,11 @@ function App() {
           key={plant.id}
           plantName={plant.plantName}
           plantImage={plant.image}
-          seedTimeIndoor={plant.sowingTime}
+          seedTime={plant.sowingTime}
           germinationTemperature={plant.germinationTemperature}
           germinationTime={plant.germinationTime}
+          harvest={plant.harvestTime}
+          indoorsGermination={plant.indoorsGermination}
         />
       ))}
       <Footer />

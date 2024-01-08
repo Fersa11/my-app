@@ -1,22 +1,27 @@
 import React from "react";
 import PlantImages from "./Images";
-import PlantInfo from "./Plantinfo";
+import SeedInfo from "./SeedInfo";
+import GerminationTemp from "./GerminationTemp";
+import GerminationTime from "./GerminationTime";
+import Harvest from "./Harvest";
 
 function Card(props) {
-    return (
-        <div>
-            <div className="card">
-                <div className="top">
-                    <h2 className="name">{props.plantName}</h2>
-                    <PlantImages image={props.plantImage} alt={props.plantName} />
-                </div>
-                <div className="bottom">
-                    <PlantInfo plantInfo={"Sowing Time: " + props.seedTimeIndoor} />
-                    <PlantInfo plantInfo={"Seed Indoor/Exdoor: " + props.seedTimeExdoor} />
-                    <PlantInfo plantInfo={"Germination Temp.: " + props.germinationTemperature} />
-                    <PlantInfo plantInfo={"Germination Time: " + props.germinationTime} />
 
-                </div>
+    return (
+        <div className="card">
+            <div >
+                <PlantImages plantName={props.plantName} image={props.plantImage} alt={props.plantName} />
+            </div>
+            <div className="bottom">
+                <SeedInfo indoorGermination={props.indoorsGermination} />
+                {
+                    props.indoorsGermination ?
+                        <SeedInfo sowingInfo={"Seeding Time: " + props.seedTime + " / Indoor"} /> :
+                        <SeedInfo sowingInfo={"Seeding Time: " + props.seedTime + " / Outdoor"} />
+                }
+                <GerminationTemp germinationTemp={props.germinationTemperature} />
+                <GerminationTime germinationTime={props.germinationTime} />
+                <Harvest harvest={props.harvest} />
             </div>
         </div>
 
