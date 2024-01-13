@@ -11,7 +11,6 @@ function CurrentTime() {
     // function updateTime() {
     //     const newTime = new Date().toLocaleTimeString();
     //     setTime(newTime);
-
     // }
 
     const [isOver, setMouse] = useState("");
