@@ -2,6 +2,8 @@ import Footer from "./Footer";
 import Header from "./Header";
 import Card from "./Card";
 import plants from "../plants";
+import AddCard from "./AddCard";
+import CurrentTime from "./CurrentTime";
 
 function App() {
   return (
@@ -20,6 +22,8 @@ function App() {
         />
       ))}
       <Footer />
+      <AddCard />
+      <CurrentTime />
     </div>
   );
 }

@@ -5,6 +5,7 @@ import GerminationTemp from "./GerminationTemp";
 import GerminationTime from "./GerminationTime";
 import Harvest from "./Harvest";
 
+
 function Card(props) {
 
     return (
