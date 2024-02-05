@@ -2,7 +2,7 @@ import React from "react";
 
 function Harvest(props) {
     return (
-        <p>Harvest: {props.harvest}</p>
+        <p>Harvest: {props.harvest2}</p>
     );
 }
 

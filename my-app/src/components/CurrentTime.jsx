@@ -31,26 +31,29 @@ function CurrentTime() {
     }
 
     function handleChangeName(event) {
-        const inputValue = event.target.value;
-        const inputName = event.target.name;
+        const { name, value } = event.target;
 
         setName(prevValue => {
+            return {
+                ...prevValue,
+                [name]: value
+            }
+        });
+        console.log(name);
+        // if (inputName === "fName") {
+        //     return {
+        //         fName: inputValue,
+        //         lName: prevValue.lName
+        //     }
+        // }
+        // else if (inputName === "lName") {
+        //     return {
+        //         fName: prevValue.fName,
+        //         lName: inputValue
+        //     }
+        // }
+        // console.log(name);
 
-            if (inputName === "fName") {
-                return {
-                    fName: inputValue,
-                    lName: prevValue
-                }
-            }
-            else if (inputName === "lName") {
-                return {
-                    fName: "",
-                    lName: inputValue
-                }
-            }
-            // console.log(name);
-        }
-        )
     }
 
     function handleClick(event) {
@@ -68,14 +71,14 @@ function CurrentTime() {
                     onChange={handleChangeName}
                     type="text"
                     name="fName"
-                // value={fName}
+                    value={name.fName}
                 >
                 </input>
                 <input
                     onChange={handleChangeName}
                     type="text"
                     name="lName"
-                // value={lName}
+                    value={name.lName}
                 >
                 </input>
                 <button className="button" type="submit" style={{ backgroundColor: isOver ? "red" : "blue" }}

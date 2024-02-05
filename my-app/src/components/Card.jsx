@@ -22,7 +22,7 @@ function Card(props) {
                 }
                 <GerminationTemp germinationTemp={props.germinationTemperature} />
                 <GerminationTime germinationTime={props.germinationTime} />
-                <Harvest harvest={props.harvest} />
+                <Harvest harvest2={props.harvest1} />
             </div>
         </div>
 
